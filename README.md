@@ -44,7 +44,7 @@ Es ideal para registrar actividades, reportes de ventas, tickets de soporte o ta
 2.  Borra cualquier código que aparezca y pega el contenido del archivo `Code.gs` (o el código proporcionado en este repo).
 3.  Edita la sección de **CONFIGURACIÓN** al inicio del código con tus datos:
 
-javascript
+```javascript
 // ======================================================================
 // CONFIGURACIÓN
 // ======================================================================
@@ -54,6 +54,7 @@ const SHEET_NAME = 'Actividades'; // El nombre exacto de la pestaña
 const ALLOWED_USERS = ['12345678', '87654321']; // Tu ID de Telegram (usa IDBot para saber cuál es)
 
 const WEB_APP_URL = 'https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec';
+```
 
 ### Paso 3: Desplegar como Aplicación Web
 1.  Haz clic en el botón azul **Implementar** (Deploy) > **Nueva implementación**.
@@ -66,8 +67,9 @@ const WEB_APP_URL = 'https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec';
 5.  Copia la **URL de la aplicación web** generada (termina en `/exec`).
 6.  Pega esa URL en la variable `WEB_APP_URL` dentro de tu código:
 
-javascript
+```javascript
 const WEB_APP_URL = '[https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec](https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec)';
+```
 
 ## Paso 4: Activar el Webhook
 1. Guarda el código (`Ctrl + S`).
@@ -90,14 +92,14 @@ const WEB_APP_URL = '[https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec]
 Puedes editar la constante **`FIELDS`** en el código para cambiar las preguntas, las opciones de los menús desplegables o las validaciones.
 
 **Ejemplo para cambiar las opciones del equipo:**
-
-javascript
+```javascript
 {
   key: 'team',
   type: 'select',
   question: 'Paso 8/10: ¿A qué **Team** está asignada?',
   options: ['Soporte', 'Ventas', 'Desarrollo', 'Administración'] // Edita esto
 },
+```
 
 ## 📄 Licencia
 Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus necesidades personales o empresariales." solo quiero las parte de codigo que son configurables
