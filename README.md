@@ -44,7 +44,7 @@ Es ideal para registrar actividades, reportes de ventas, tickets de soporte o ta
 2.  Borra cualquier código que aparezca y pega el contenido del archivo `Code.gs` (o el código proporcionado en este repo).
 3.  Edita la sección de **CONFIGURACIÓN** al inicio del código con tus datos:
 
-```javascript
+javascript
 // ======================================================================
 // CONFIGURACIÓN
 // ======================================================================
@@ -52,6 +52,8 @@ const TOKEN = '123456789:ABCdefGHIjklMNOpqRSTuvwXYZ'; // Tu Token de BotFather
 const ID_SHEET = '1xY2z3_ID_DE_TU_HOJA_DE_CALCULO_AQUI'; // El ID largo de la URL de tu Sheet
 const SHEET_NAME = 'Actividades'; // El nombre exacto de la pestaña
 const ALLOWED_USERS = ['12345678', '87654321']; // Tu ID de Telegram (usa IDBot para saber cuál es)
+
+const WEB_APP_URL = 'https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec';
 
 ### Paso 3: Desplegar como Aplicación Web
 1.  Haz clic en el botón azul **Implementar** (Deploy) > **Nueva implementación**.
@@ -64,7 +66,7 @@ const ALLOWED_USERS = ['12345678', '87654321']; // Tu ID de Telegram (usa IDBot 
 5.  Copia la **URL de la aplicación web** generada (termina en `/exec`).
 6.  Pega esa URL en la variable `WEB_APP_URL` dentro de tu código:
 
-```javascript
+javascript
 const WEB_APP_URL = '[https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec](https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec)';
 
 ## Paso 4: Activar el Webhook
@@ -89,13 +91,13 @@ Puedes editar la constante **`FIELDS`** en el código para cambiar las preguntas
 
 **Ejemplo para cambiar las opciones del equipo:**
 
-```javascript
-{ 
-  key: 'team', 
-  type: 'select', 
-  question: 'Paso 8/10: ¿A qué **Team** está asignada?', 
+javascript
+{
+  key: 'team',
+  type: 'select',
+  question: 'Paso 8/10: ¿A qué **Team** está asignada?',
   options: ['Soporte', 'Ventas', 'Desarrollo', 'Administración'] // Edita esto
 },
 
 ## 📄 Licencia
-Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus necesidades personales o empresariales.
+Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus necesidades personales o empresariales." solo quiero las parte de codigo que son configurables
