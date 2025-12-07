@@ -1,5 +1,5 @@
 // ======================================================================
-// CONFIGURACIÓN (REEMPLAZA ESTOS VALORES)
+// CONFIGURACIÓN (REEMPLAZA ESTOS VALORES) - Richard-Dev
 // ======================================================================
 // 1. TOKEN: El token que te dio BotFather.
 const TOKEN = '123456789:AAF_testToken_EJEMPLO_9j_pX_qR_sT_uV_wX'; 
