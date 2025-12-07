@@ -104,4 +104,4 @@ Puedes editar la constante **`FIELDS`** en el código para cambiar las preguntas
 ```
 
 ## 📄 Licencia
-Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus necesidades personales o empresariales." solo quiero las parte de codigo que son configurables
+Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus necesidades personales o empresariales."  Richard-Dev 2025
