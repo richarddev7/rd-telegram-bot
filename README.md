@@ -21,23 +21,26 @@ Es ideal para registrar actividades, reportes de ventas, tickets de soporte o ta
 
 ## ⚙️ Configuración e Instalación
 
-### Paso 1: Preparar la Google Sheet
-1.  Crea una nueva hoja de cálculo en Google Sheets.
-2.  Copia el **ID de la hoja** (se encuentra en la URL: `docs.google.com/spreadsheets/d/ID_DE_LA_HOJA/edit...`).
-3.  Renombra la pestaña inferior a `Actividades` (o el nombre que prefieras, pero recuérdalo).
-4.  Crea los encabezados en la primera fila (Fila 1) en este orden exacto:
-    * `A1`: Fecha Creación
-    * `B1`: Medio
-    * `C1`: Condición
-    * `D1`: Cliente
-    * `E1`: Vencimiento
-    * `F1`: Asunto
-    * `G1`: Prioridad
-    * `H1`: Descripción
-    * `I1`: Team
-    * `J1`: Respuesta
-    * `K1`: Estado
-    * `L1`: Fuente
+## 📄 Paso 1: Preparar la Google Sheet
+
+Para que el bot guarde la información correctamente, debes preparar la hoja de cálculo con los encabezados exactos:
+
+1.  **Crea una nueva hoja de cálculo** en Google Sheets.
+2.  **Copia el ID de la hoja** (es la parte larga de la URL, entre `/d/` y `/edit`). Este ID lo usarás en la constante `ID_SHEET`.
+3.  **Renombra la pestaña** inferior a **`Actividades`** (o el nombre que elijas, pero debe coincidir con la constante `SHEET_NAME`).
+4.  **Crea los encabezados** en la primera fila (**Fila 1**) en este orden **exacto**. Solo se requieren **7 columnas**:
+
+| Columna | Celda | Encabezado | Notas |
+| :---: | :---: | :--- | :--- |
+| **1** | A1 | **Fecha Creación** | Se genera automáticamente. |
+| **2** | B1 | **Cliente** | Pregunta del formulario. |
+| **3** | C1 | **Asunto** | Pregunta del formulario. |
+| **4** | D1 | **Prioridad** | Pregunta del formulario. |
+| **5** | E1 | **Descripción** | Pregunta del formulario. |
+| **6** | F1 | **Estado** | Pregunta del formulario. |
+| **7** | G1 | **Fuente** | Se genera automáticamente. |
+
+> ⚠️ **Importante:** El orden de las columnas es crucial. Si cambias la secuencia o el número de columnas, el bot guardará los datos de forma incorrecta.
 
 ### Paso 2: Configurar el Script
 1.  En tu Google Sheet, ve a **Extensiones > Apps Script**.
@@ -91,13 +94,12 @@ const WEB_APP_URL = '[https://script.google.com/macros/s/TU_URL_LARGA_AQUI/exec]
 ## 🛠 Personalización
 Puedes editar la constante **`FIELDS`** en el código para cambiar las preguntas, las opciones de los menús desplegables o las validaciones.
 
-**Ejemplo para cambiar las opciones del equipo:**
 ```javascript
-{
-  key: 'team',
-  type: 'select',
-  question: 'Paso 8/10: ¿A qué **Team** está asignada?',
-  options: ['Soporte', 'Ventas', 'Desarrollo', 'Administración'] // Edita esto
+{ 
+  key: 'status', 
+  type: 'select', 
+  question: 'Paso 6/7: ¿Cuál es el **Estado** actual del registro?', 
+  options: ['Pendiente', 'En Progreso', 'Bloqueado', 'Completado'] // ✏️ Edita los elementos de esta lista
 },
 ```
 
